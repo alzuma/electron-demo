@@ -1,0 +1,40 @@
+{
+  "name": "electron-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "build:react": "webpack --mode development --config webpack.react.config.js",
+    "build": "webpack --mode development",
+    "start": "electron ./dist/main.js",
+    "package-win": "electron-packager . electron-demo --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-demo\""
+  },
+  "keywords": [],
+  "author": "Kristaps Vītoliņš",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.2",
+    "babel-loader": "^8.0.5",
+    "electron": "^4.0.6",
+    "electron-cgi": "0.0.2",
+    "electron-packager": "^13.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.16.4",
+    "tslint": "^5.13.1",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  }
+}

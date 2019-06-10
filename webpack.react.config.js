@@ -28,7 +28,10 @@ const config = {
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
   },
-  plugins: [htmlPlugin]
+  plugins: [htmlPlugin],
+  stats: {
+    children: false
+  }
 };
 
 module.exports = (env, argv) => {
